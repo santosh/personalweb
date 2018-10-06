@@ -1,0 +1,17 @@
+body {
+  background: #ddd;
+}
+
+body * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #ccc;
+}

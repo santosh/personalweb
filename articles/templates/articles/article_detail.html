@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+
+{% block title %} Articles {% endblock %}
+
+{% block content %}
+<h1><a href="{% url 'articles:list' %}"><img src="{% static 'logo.jpg' %}" alt="Blog Logo"></a></h1>
+<div class="article">
+  <article>
+    <img src="{{ article.thumbnail.url }}" alt="{{ article.title }}">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.body }}</p>
+    <p>{{ article.date }}</p>
+  </article>
+</div>
+{% endblock %}

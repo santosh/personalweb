@@ -1,0 +1,18 @@
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+
+{% block title %} Articles {% endblock %}
+
+{% block content %}
+<h1><a href="{% url 'articles:list' %}"><img src="{% static 'logo.jpg' %}" alt="Blog Logo"></a></h1>
+<h1>Article List</h1>
+<div class="articles">
+  {% for article in articles %}
+  <article class="article">
+    <h2><a href="{% url 'articles:details' slug=article.slug %}">{{article.title}}</a></h2>
+    <p>{{ article.get_snippet }}</p>
+    <p>{{ article.date }}</p>
+  </article>
+  {% endfor %}
+</div>
+{% endblock %}
