@@ -13,6 +13,16 @@
 
 <body>
   <div class="container">
+    <nav>
+      <ul>
+        <li>
+          <form class="logout-link" action="{% url 'accounts:logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
     {% block content %}
     {% endblock %}
   </div>
