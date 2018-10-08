@@ -6,5 +6,11 @@
 {% block content %}
 <div class="create-article">
   <h2>What Are You Going To Write About</h2>
+  <!-- enctype="multipart/form-data" is there because our form has an image field to upload -->
+  <form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Create">
+  </form>
 </div>
 {% endblock %}

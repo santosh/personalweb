@@ -15,12 +15,18 @@
   <div class="container">
     <nav>
       <ul>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'articles:create' %}">New Article</a></li>
         <li>
           <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
             {% csrf_token %}
             <button type="submit">Logout</button>
           </form>
         </li>
+        {% else %}
+        <li><a href="{% url 'accounts:login' %}">Login</a></li>
+        <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+        {% endif %}
       </ul>
     </nav>
     {% block content %}

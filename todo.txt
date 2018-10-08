@@ -1,0 +1,2 @@
+* test with mongodb
+* show login on articles page when logged out, else username when logged in
