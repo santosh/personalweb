@@ -4,7 +4,7 @@ personalweb serves as persoanl website boilerplate, made in Django. This include
 
 ## Getting Started
 
-Make a virtual environment if you haven't already so that you're not messing up your system level packages. Install packages with `pip install -r requirements.txt`.
+Make sure mongodb is installed. Instruction for installation can be found on [MongoDB docs][installation docs] website. Make a virtual environment if you haven't already so that you're not messing up your system level packages. Install packages with `pip install -r requirements.txt`.
 
     python3 -m venv .venv
     source .venv/bin/activate
@@ -20,9 +20,8 @@ If you are interested in deploying to cloud, see Deployment section in GitHub wi
 
 Necessary dependencies.
 
- * `Django`
  * `Pillow` - For handling images in blog post (ORM)
- * `pymongo` - other can be used too, unless you know how to deal with it
+ * `djongo` - wrapper to convert sql query to mongodb queries
 
 Development dependencies.
 
@@ -34,3 +33,5 @@ Found a bug? Have an idea? Create an [issue](https://github.com/santosh/personal
 ## License
 
 This project is licensed under BSD-3. See [LICENSE](./LICENSE) for full license.
+
+ [installation docs]: https://docs.mongodb.com/manual/tutorial/#installation
