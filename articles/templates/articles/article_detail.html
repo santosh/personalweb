@@ -4,7 +4,7 @@
 {% block title %} Articles {% endblock %}
 
 {% block content %}
-<h1><a href="{% url 'articles:list' %}"><img src="{% static 'logo.jpg' %}" alt="Blog Logo"></a></h1>
+<h1><a href="{% url 'articles:list' %}"><img src="{% static 'images/logo.jpg' %}" alt="Blog Logo"></a></h1>
 <div class="article">
   <article>
     <img src="{{ article.thumbnail.url }}" alt="{{ article.title }}">
