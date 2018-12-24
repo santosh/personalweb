@@ -32,6 +32,7 @@ Found a bug? Have an idea? Create an [issue](https://github.com/santosh/personal
 
 ## License
 
-This project is licensed under BSD-3. See [LICENSE](./LICENSE) for full license.
+This project is licensed under BSD-3. See [LICENSE][license] for full license.
 
  [installation docs]: https://docs.mongodb.com/manual/tutorial/#installation
+ [license]: https://github.com/santosh/personalweb/blob/master/LICENSE
