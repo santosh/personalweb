@@ -2,5 +2,5 @@ Django==2.1.5
 mysqlclient==1.4.1
 Pillow==5.3.0
 pylint==2.2.2
-autopep8==1.4.3
+yapf==0.25.0
 six==1.12.0

@@ -18,7 +18,7 @@ Then you run as with any other Django application.
 
     python manage.py runserver
 
-If you are interested in deploying to cloud, see Deployment section in GitHub wiki.
+If you are interested in deploying to cloud, see [Deployment][personalweb deployment wiki] section in GitHub wiki.
 
 ## Development
 
@@ -30,7 +30,7 @@ Necessary dependencies.
 Development dependencies.
 
  * `pylint` - spot the error until it's too late
- * `autopep8` - so that you don't have to remember every moves
+ * `yapf` - so that you don't have to remember every moves
 
 Found a bug? Have an idea? Create an [issue](https://github.com/santosh/personalweb/issues). Seel also [CONTRUBUTING](./.github/CONTRIBUTING.md).
 
