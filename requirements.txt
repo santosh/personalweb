@@ -1,4 +1,4 @@
-Django==2.1.4
+Django==2.1.5
 djongo==1.2.31
 Pillow==5.3.0
 pylint==2.2.2
