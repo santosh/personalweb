@@ -1,4 +1,6 @@
-* test with mongodb
+## first fold
+* highlights on what you are
+
 * show login on articles page when logged out, else username when logged in
 * stylize
 * tweak the slugify
