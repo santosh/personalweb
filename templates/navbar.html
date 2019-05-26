@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!-- TODO: Brand name will be in global yaml config-->
+  <a class="navbar-brand">Santosh</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!--  TODO: Remove this extra ul, see comment at https://stackoverflow.com/a/41513784/939986-->
+      <ul class="navbar-nav mr-auto"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="#works" class="nav-link">Works</a>
+        </li>
+        <li class="nav-item">
+            <!-- TODO: Following templating rules for link -->
+            <a href="/articles" class="nav-link">Blog</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'articles:create' %}">New Article</a>
+        </li>
+        <li class="nav-item">
+          <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+        </li>
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'accounts:signup' %}">Signup</a>
+        </li>
+        {% endif %}
+      </ul>
+  </div>
+</nav>

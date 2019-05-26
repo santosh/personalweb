@@ -1,6 +1,5 @@
-{% load static from staticfiles %}
-
 <!DOCTYPE html>
+{% load static from staticfiles %}
 <html lang="en">
 
 <head>
@@ -10,30 +9,16 @@
   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
   <link rel="apple-touch-icon" href="{% static 'images/favicon.png' %}" type="image/png">
   <title>{% block title %} {% endblock %}</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
 <body>
   <div class="container">
-    <nav>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'articles:create' %}">New Article</a></li>
-        <li>
-          <form class="logout-link" action="{% url 'accounts:logout' %}" method="POST">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-          </form>
-        </li>
-        {% else %}
-        <li><a href="{% url 'accounts:login' %}">Login</a></li>
-        <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
-        {% endif %}
-      </ul>
-    </nav>
+    {% include 'navbar.html' %}
     {% block content %}
     {% endblock %}
+    {% include 'footer.html' %}
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

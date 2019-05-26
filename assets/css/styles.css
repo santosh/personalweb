@@ -15,3 +15,7 @@ a:visited {
 a:hover {
   background: #ccc;
 }
+
+footer {
+  font-size: smaller;
+}

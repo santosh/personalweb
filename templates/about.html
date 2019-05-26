@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-  </head>
-  <body>
+{% extends 'base_layout.html' %}
+{% load static from staticfiles %}
+<!--TODO: Remove this page. This page will be the first fold of the site.-->
+{% block content %}
     <h1>I am Santosh.</h1>
     <p>Author of this website..</p>
-  </body>
-</html>
+{% endblock %}
