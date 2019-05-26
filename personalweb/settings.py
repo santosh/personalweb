@@ -78,25 +78,12 @@ WSGI_APPLICATION = 'personalweb.wsgi.application'
 
 # If deploying on Heroku, it will automatically be converted to Postgres
 # Otherwise while testing, make appropriate database and user
-# TODO: Not tested on Heroku
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'personalweb_db',
-        'USER': 'personalweb_user',
-        'PASSWORD': 'personalweb_pass',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
-
-# Hack for testing
-if 'test' in sys.argv:
-    DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
