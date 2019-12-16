@@ -16,6 +16,10 @@ Then you run as with any other Django application.
 
 If you are interested in deploying to cloud, see [Deployment][personalweb deployment wiki] section in GitHub wiki.
 
+## Features
+
+[x] - Publishes RSS
+
 ## Development
 
 Necessary dependencies.
@@ -27,7 +31,7 @@ Development dependencies.
  * `pylint` - spot the error until it's too late
  * `yapf` - so that you don't have to remember every moves
 
-Found a bug? Have an idea? Create an [issue](https://github.com/santosh/personalweb/issues). Seel also [CONTRUBUTING](./.github/CONTRIBUTING.md).
+Found a bug? Have an idea? Create an [issue](https://github.com/santosh/personalweb/issues). Or if you are a Python ninja with a taste in web, you can contribute to the development. See also [CONTRUBUTING](./.github/CONTRIBUTING.md).
 
 ## License
 
