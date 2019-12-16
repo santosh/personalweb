@@ -8,6 +8,7 @@ class Article(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now_add=True)
     thumbnail = models.ImageField(default="default.jpg", blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
 
